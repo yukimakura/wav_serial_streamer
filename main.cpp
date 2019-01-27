@@ -44,7 +44,7 @@ int main(int argc, char **argv)
 		port.set_option(serial_port_base::flow_control(serial_port_base::flow_control::none));
 		port.set_option(serial_port_base::parity(serial_port_base::parity::none));
 		port.set_option(serial_port_base::stop_bits(serial_port_base::stop_bits::one));
-        write(port,buffer(pcmForRead.s));
+        	write(port,buffer(pcmForRead.s));
  
     } catch (const std::exception& e) {
 		std::cerr << e.what() << std::endl;

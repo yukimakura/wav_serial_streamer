@@ -1,6 +1,4 @@
-# CMakeのバージョンを設定
 cmake_minimum_required(VERSION 3.5)
-# プロジェクト名と使用する言語を設定
 project(wav_serial_streamer CXX)
 set (CMAKE_CXX_STANDARD 11)
 
@@ -11,12 +9,11 @@ find_package(Boost REQUIRED system thread)
 
 
 if(Boost_FOUND)
-    message(STATUS "!!! BOOST FOUND !!!")
+    message(STATUS "BOOST found !")
 else()
-    message(STATUS "!!! BOOST NOT FOUND !!!")
+    message(STATUS "BOOST not found !!!")
 endif()
 
-# a.outという実行ファイルをmain.cppとhello.cppから作成
 add_executable(wav_serial_streamer main.cpp wave.cpp)
 include_directories(${Boost_INCLUDE_DIR})
 
